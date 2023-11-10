@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Addition } from '../addition/addition';
+import { Substraction } from '../substraction/substraction';
 
 @Component({
   selector: 'app-ui',
@@ -23,6 +24,9 @@ export class UiComponent {
     switch (this.operacion) {
       case 'add':
         this.resultado = Addition.calculate(this.num1, this.num2);
+        break;
+      case 'sub':
+        this.resultado = Substraction.calculate(this.num1, this.num2);
         break;
     }
   }

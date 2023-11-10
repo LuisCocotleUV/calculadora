@@ -16,7 +16,7 @@
                 <h1 id="ecuacion">Introduce los datos</h1>
                 <h1>Selecciona la operación a realizar</h1>
                 <button [ngClass]="{'button-selected': selectedButton === 'add'}" (click)="selectOperation('add')">Suma</button>
-                <button (click)="operacion = 'sub'">Resta</button>
+                <button [ngClass]="{'button-selected': selectedButton === 'sub'}" (click)="selectOperation('sub')">Resta</button>
                 <button (click)="operacion = 'mul'">Multiplicación</button>
                 <button (click)="operacion = 'div'">División</button>
                 <button (click)="operacion = 'exp'">Exponenciación</button>
