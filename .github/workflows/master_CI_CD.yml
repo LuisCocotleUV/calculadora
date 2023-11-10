@@ -1,19 +1,18 @@
 name: CI Angular app through GitHub Actions
-on: 
+on:
   push:
-    branches: [ "master"]
+    branches: ["master"]
   pull_request:
-    branches: [ "master"]
+    branches: ["master"]
 jobs:
   build:
-    name: master_CI_CD
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 18.x
+      - name: Use Node.js 16.x
         uses: actions/setup-node@v1
         with:
-          node-version: 18.x
+          node-version: 16.x
 
       - name: Setup
         run: npm ci
