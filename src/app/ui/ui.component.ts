@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Addition } from '../addition/addition';
 import { Substraction } from '../substraction/substraction';
 import { Multiplication } from '../multiplication/multiplication';
+import { Division } from '../division/division';
 
 @Component({
   selector: 'app-ui',
@@ -31,6 +32,9 @@ export class UiComponent {
         break;
       case 'mul':
         this.resultado = Multiplication.calculate(this.num1, this.num2);
+        break;
+      case 'div':
+        this.resultado = Division.calculate(this.num1, this.num2);
         break;
     }
   }
