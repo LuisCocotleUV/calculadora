@@ -18,7 +18,7 @@
                 <button [ngClass]="{'button-selected': selectedButton === 'add'}" (click)="selectOperation('add')">Suma</button>
                 <button [ngClass]="{'button-selected': selectedButton === 'sub'}" (click)="selectOperation('sub')">Resta</button>
                 <button [ngClass]="{'button-selected': selectedButton === 'mul'}" (click)="selectOperation('mul')">Multiplicación</button>
-                <button (click)="operacion = 'div'">División</button>
+                <button [ngClass]="{'button-selected': selectedButton === 'div'}" (click)="selectOperation('div')">División</button>
                 <button (click)="operacion = 'exp'">Exponenciación</button>
                 <button (click)="operacion = 'sqrt'">Raíz cuadrada</button>
                 <button (click)="operacion = 'sqr'">Cuadrado</button>
