@@ -96,7 +96,7 @@ button:active {
     margin-right: 0.5rem;
 }
 
-#operacion:focus {
+.button-selected {
     background-color: #2c2c2c;
     color: #ffd10f;
     border: #ffd10f solid 2px;

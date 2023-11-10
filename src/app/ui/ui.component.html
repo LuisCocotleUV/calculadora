@@ -15,24 +15,25 @@
             <div>
                 <h1 id="ecuacion">Introduce los datos</h1>
                 <h1>Selecciona la operación a realizar</h1>
-                <button id="operacion">Suma</button>
-                <button id="operacion">Resta</button>
-                <button id="operacion">Multiplicación</button>
-                <button id="operacion">División</button>
-                <button id="operacion">Exponenciar</button>
-                <button id="operacion">???</button>
-                <button id="operacion">Raíz cuadrada</button>
+                <button [ngClass]="{'button-selected': selectedButton === 'add'}" (click)="selectOperation('add')">Suma</button>
+                <button (click)="operacion = 'sub'">Resta</button>
+                <button (click)="operacion = 'mul'">Multiplicación</button>
+                <button (click)="operacion = 'div'">División</button>
+                <button (click)="operacion = 'exp'">Exponenciación</button>
+                <button (click)="operacion = 'sqrt'">Raíz cuadrada</button>
+                <button (click)="operacion = 'sqr'">Cuadrado</button>
             </div>
                 <h2>Introduce el primer número:</h2>
-                <input id="valorX" placeholder="Primer número...">
+                <input type="number" [(ngModel)]="num1" placeholder="Primer número...">
                 <h2>Introduce el segundo número:</h2>
-                <input id="valorA" placeholder="Segundo número...">
+                <input type="number" [(ngModel)]="num2" placeholder="Segundo número...">
                 <br>
             <div>
-                <button id="calc">Calcular</button>
+                <button id="calc" (click)="calculate()">Calcular</button>
             </div>
                 <h1>Resultado</h1>
-                <input id="resultado" placeholder="Resultado..." readonly>
+                <input type="text" [(ngModel)]="resultado" readonly>
+
         </section>
         <footer>
             <p id="fin">Pruebas de software - Cocotle Yáñez Luis David</p>
