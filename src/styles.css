@@ -19,8 +19,6 @@ header {
     font-weight: 900;
     font-style: italic;
     clip-path: polygon(2% 0, 100% 0, 100% 20%, 100% 65%, 98% 100%, 0 100%, 0% 80%, 0 35%);
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
 }
 
 h1 {
