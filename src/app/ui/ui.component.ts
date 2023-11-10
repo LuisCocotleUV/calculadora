@@ -3,6 +3,7 @@ import { Addition } from '../addition/addition';
 import { Substraction } from '../substraction/substraction';
 import { Multiplication } from '../multiplication/multiplication';
 import { Division } from '../division/division';
+import { Exp } from '../exp/exp';
 
 @Component({
   selector: 'app-ui',
@@ -35,6 +36,9 @@ export class UiComponent {
         break;
       case 'div':
         this.resultado = Division.calculate(this.num1, this.num2);
+        break;
+      case 'exp':
+        this.resultado = Exp.calculate(this.num1, this.num2);
         break;
     }
   }
