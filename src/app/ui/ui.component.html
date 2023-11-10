@@ -17,7 +17,7 @@
                 <h1>Selecciona la operación a realizar</h1>
                 <button [ngClass]="{'button-selected': selectedButton === 'add'}" (click)="selectOperation('add')">Suma</button>
                 <button [ngClass]="{'button-selected': selectedButton === 'sub'}" (click)="selectOperation('sub')">Resta</button>
-                <button (click)="operacion = 'mul'">Multiplicación</button>
+                <button [ngClass]="{'button-selected': selectedButton === 'mul'}" (click)="selectOperation('mul')">Multiplicación</button>
                 <button (click)="operacion = 'div'">División</button>
                 <button (click)="operacion = 'exp'">Exponenciación</button>
                 <button (click)="operacion = 'sqrt'">Raíz cuadrada</button>
